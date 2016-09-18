@@ -1,24 +1,20 @@
 <?php 
-    if(isset($_POST['submit'])){
-        $to = "lance.mebrasil@gmail.com"; // this is your Email address
+    if (isset($_POST['submit'])) {
+        $to = 'lance.mebrasil@gmail.com'; // this is your Email address
         $from = $_POST['email']; // this is the sender's Email address
         $valor = $_POST['valor'];
         $email_user = $_POST['email'];
         $option = $_POST['option'];
-        $subject = "WEBSITE - ".$valor;
-        $message = "Valor:".$valor . " - Option:". $option." - Email:".$email_user;
+        $subject = 'WEBSITE - '.$valor;
+        $message = "Valor:".$valor . ' - Option:'. $option.' - Email:'.$email_user;
         $headers = "From:" . $from;
         
         if(mail($to,$subject,$message,$headers)) {
-            echo '<p>Your message has been sent!</p>';
-        } else { 
-            echo '<p>Something went wrong, go back and try again!</p>'; 
             
-                mail($to,"Falhou","VALOR:".$valor,$headers);
+        } else {
+            mail($to,"Falhou","VALOR:".$valor,$headers);
         }
-    } else {
-        echo '<p>Something went wrong, go back and try again222!</p>'; 
-    }
+    } else
 ?>
 <!DOCTYPE html>
 <html class="full" lang="pt-br">
@@ -63,7 +59,7 @@
                 <div class="col-md-4"></div>
                 <div class="col-md-4"></div>  
                     <h1 style="color:#e9474a">Agradecemos o Interesse!</h1>
-                    <h1><small>Infelizmente no momento não temos <i>startups</i> disponíveis, mas entraremos em contato assim que houver disponibilidade. <br> <b style="color:black">Obrigado!</b>  </small></h1>
+                    <h1><small>Em breve enviaremos os projetos selecionados para investimento. <br> <b style="color:black">Obrigado!</b>  </small></h1>
                 <div class="col-md-4"></div>
             </div>
             <div class="row">
