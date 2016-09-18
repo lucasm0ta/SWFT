@@ -15,13 +15,13 @@
         if (!mysqli_connect_errno()) {
             $sql = "INSERT INTO users (value, email, category) VALUES ('$valor', '$email', '$category')";
             if ($conn->query($sql)) {
-                echo("Inseriu info.");
+                // echo("Inseriu info.");
             } else {
-                echo("Não inseriu.");
+                // echo("Não inseriu.");
             }
         }else {
-            echo("Não inseriu pela conexão.");
-            exit();
+            // echo("Não inseriu pela conexão.");
+            // exit();
         }
     }
 ?>
