@@ -23,6 +23,7 @@
         }else {
             echo("Não inseriu pela conexão.");
         }
+    }
 ?>
 <!DOCTYPE html>
 <html class="full" lang="pt-br">
