@@ -1,20 +1,28 @@
 <?php 
     if (isset($_POST['submit'])) {
-        $to = 'lance.mebrasil@gmail.com'; // this is your Email address
-        $from = $_POST['email']; // this is the sender's Email address
-        $valor = $_POST['valor'];
-        $email_user = $_POST['email'];
-        $option = $_POST['option'];
-        $subject = 'WEBSITE - '.$valor;
-        $message = "Valor:".$valor . ' - Option:'. $option.' - Email:'.$email_user;
-        $headers = "From:" . $from;
+        // Create connection
+        $conn = new mysqli($servername, $username, $password, $database);   
         
-        if(mail($to,$subject,$message,$headers)) {
-            
-        } else {
-            mail($to,"Falhou","VALOR:".$valor,$headers);
+        $valor = $conn->escape_string($_POST['valor']);
+        $email = $conn->escape_string($_POST['email']);
+        $option = $conn->escape_string($_POST['option']);
+        
+        $servername = "localhost";
+        $username = "root";
+        $password = "pianiticamente";
+        $database = "lance_me";
+
+        // Check connection
+        if (!$conn->connect_error) {
+            $sql = "INSERT INTO users (value, email, category) VALUES ('$valor', '$email', '$category')";
+            if ($conn->query($sql)) {
+                echo("Inseriu info.");
+            } else {
+                echo("Não inseriu.");
+            }
+        }else {
+            echo("Não inseriu pela conexão.");
         }
-    } else
 ?>
 <!DOCTYPE html>
 <html class="full" lang="pt-br">
