@@ -1,17 +1,16 @@
 <?php 
     if (isset($_POST['submit'])) {
         // Create connection
+        $servername = "localhost";
+        $username = "root";
+        $password = "pianiticamente";
+        $database = "lance_me";
         $conn = new mysqli($servername, $username, $password, $database);   
         
         $valor = $conn->escape_string($_POST['valor']);
         $email = $conn->escape_string($_POST['email']);
         $option = $conn->escape_string($_POST['option']);
         
-        $servername = "localhost";
-        $username = "root";
-        $password = "pianiticamente";
-        $database = "lance_me";
-
         // Check connection
         if (!mysqli_connect_errno()) {
             $sql = "INSERT INTO users (value, email, category) VALUES ('$valor', '$email', '$category')";
