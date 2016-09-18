@@ -13,7 +13,7 @@
         $database = "lance_me";
 
         // Check connection
-        if (!$conn->connect_error) {
+        if (!mysqli_connect_errno()) {
             $sql = "INSERT INTO users (value, email, category) VALUES ('$valor', '$email', '$category')";
             if ($conn->query($sql)) {
                 echo("Inseriu info.");
@@ -22,6 +22,7 @@
             }
         }else {
             echo("Não inseriu pela conexão.");
+            exit();
         }
     }
 ?>
@@ -68,7 +69,7 @@
                 <div class="col-md-4"></div>
                 <div class="col-md-4"></div>  
                     <h1 style="color:#e9474a">Agradecemos o Interesse!</h1>
-                    <h1><small>Em breve enviaremos os projetos selecionados para investimento. <br> <b style="color:black">Obrigado!</b>  </small></h1>
+                    <h1><small>Em breve enviaremos os projetos selecionados para investimento.</small><small><b style="color:black">Obrigado!</b></small>  </small></h1>
                 <div class="col-md-4"></div>
             </div>
             <div class="row">
