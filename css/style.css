@@ -16,7 +16,7 @@ body {
     -o-background-size: cover;
 }
 .navbar-brand{ 
-  background: url(../img/bg.jpeg) center / contain no-repeat;
+  background: url(../img/logo.svg) center / contain no-repeat;
   width: 200px;
 }
 .navbar{

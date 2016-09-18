@@ -5,12 +5,19 @@
         $valor = $_POST['valor'];
         $email_user = $_POST['email'];
         $option = $_POST['option'];
-        $subject = "WEBSITE";
+        $subject = "WEBSITE - ".$valor;
         $message = "Valor:".$valor . " - Option:". $option." - Email:".$email_user;
         $headers = "From:" . $from;
-        $headers2 = "From:" . $to;
         
-        mail($to,$subject,$message,$headers);
+        if(mail($to,$subject,$message,$headers)) {
+            echo '<p>Your message has been sent!</p>';
+        } else { 
+            echo '<p>Something went wrong, go back and try again!</p>'; 
+            
+                mail($to,"Falhou","VALOR:".$valor,$headers);
+        }
+    } else {
+        echo '<p>Something went wrong, go back and try again222!</p>'; 
     }
 ?>
 <!DOCTYPE html>
