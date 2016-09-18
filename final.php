@@ -1,5 +1,17 @@
 <?php 
-    var arr = $[POST];
+    if(isset($_POST['submit'])){
+        $to = "lance.mebrasil@gmail.com"; // this is your Email address
+        $from = $_POST['email']; // this is the sender's Email address
+        $valor = $_POST['valor'];
+        $email_user = $_POST['email'];
+        $option = $_POST['option'];
+        $subject = "WEBSITE";
+        $message = "Valor:".$valor . " - Option:". $option." - Email:".$email_user;
+        $headers = "From:" . $from;
+        $headers2 = "From:" . $to;
+        
+        mail($to,$subject,$message,$headers);
+    }
 ?>
 <!DOCTYPE html>
 <html class="full" lang="pt-br">
