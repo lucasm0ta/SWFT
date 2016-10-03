@@ -139,6 +139,11 @@ form button {
 .big-call {
     margin-bottom: 5px;
 }
+.big-call h2{
+    font-size: 17pt;
+    color: #555;
+    text-align: center;
+}
 .text-readable {
     padding: 15px 50px;
     background: none;
@@ -164,14 +169,14 @@ form button {
     border-bottom: 1px solid #e9474a;
     color: black;
 }
-#workflow {
+.workflow {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-content: flex-start;
 }
-#workflow p{
+.workflow p{
     font-size: 12pt;
 }
 .w-icon{
