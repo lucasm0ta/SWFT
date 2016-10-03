@@ -15,68 +15,79 @@
         <title>Lance.me</title>
     </head>
     <body>
-        <nav class="navbar navbar navbar-fixed-top" role="navigation">
-            <div class="container">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="http://lanceme.co"></a>
-                </div>
-                <!-- /.navbar-collapse -->
+        <div id="gradiente"></div>
+        <div class="container-full">
+            <div class="row logo">
+                <div class="col-md-4"></div>
             </div>
-            <!-- /.container -->
-        </nav>
-        <div class="container">
-            <div class="row">
+            <div class="row sublogo">
                 <div class="col-md-4"></div>
                 <div class="col-md-4"></div>    
-                    <h1>Troque <b>pontos</b> por participações em <i>startups</i></h1>
+                    <h3>Plataforma de Investimento Coletivo em Startups</h3>
                 <div class="col-md-4"></div>
             </div>
-            <div class="row">
-                <div class="col-md-4"></div>
-                <div class="col-md-4"></div>    
-                    <h1><small>Aqui você transforma os pontos do seu cartão de crédito em investimento para ideias de grande pontencial.</small></h1>
-                <div class="col-md-4"></div>
-            </div>
-            <div class="row">
-                <div class="col-md-3"></div>
-                <div class="col-md-6">
-                    <button type="button" id="myBtn" class="btn btn-danger" data-toggle="modal" data-target="#myModal">Quero Investir</button>
+            <div class="row big-call">
+                <div class="col-md-12">  
+                    <h1>Troque <b>pontos</b> do cartão por participações em <i>startups</i></h1>
                 </div>
-                <div class="col-md-3"></div>
+            </div>
+            <div class="jumbotron text-readable">
+                <div style="margin:0" class="row">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-8">
+                        <p>Na <i>lance.me</i>, não é necessário uma grande quantia para investir em startups. Não é necessário nem mesmo dinheiro.  
+                            Tornamos possível, até mesmo em pontos do cartão, que você se tornar um investidor. Veja como funciona:</p>
+                    </div>
+                    <div class="col-md-2"></div>
+                </div>
+            </div>
+            <div id="workflow" class="text-readable">
+                <div class="w-icon">
+                    <img src="img/Lance_Icone_1.svg">
+                    <p>Junte pontos ou dinheiro</p>
+                </div>
+                <div class="w-icon">
+                    <img src="img/Lance_Icone_2.svg">
+                    <p>Escolha uma startup de sucesso para investir</p>
+                </div>
+                <div class="w-icon">
+                    <img src="img/Lance_Icone_3.svg">
+                    <p>Acompanhe seu crecimento ao longo do tempo</p>
+                </div>
+                <div class="w-icon">
+                    <img src="img/Lance_Icone_4.svg">
+                    <p>Receba o retorno em dividendos e na venda da sua participação</p>
+                </div>
+            </div>
+            <div class="row big-call">
+                <div class="col-md-12">  
+                    <h3>Cadastre seu email e receba 50% de bônus no seu primeiro investimento.*</h3>
+                    <button type="button" class="btn btn-danger" data-toggle="collapse" data-target="#base">Cadastrar</button>
+                </div>
+            </div>
+                
+            <div id="pre-footer"></div>
+            <footer class="footer">
+                <p class="text-muted"><a href="mailto:lance.mebrasil@gmail.com">lance.mebrasil@gmail.com</a></p>
+                <p class="text-muted">Copyright 2016 by Lance.me. All Rights Reserved.</p>
+            </footer>
+    
+            <div id="base" class="collapse">
+                <div class="close-signup">
+                    <button data-toggle="collapse" data-target="#base">X</button>
+                </div>
+                <form action="final.php" method="post">
+                    <div class="mod_div">
+                        <soft>Email para cadastro:</soft> <input name="email" type="email" placeholder="exemplo@email.com" oninvalid="setCustomValidity('Email de formato inválido.')" required>
+                    </div>
+                    <div class="mod_div">
+                        <input class="btn btn-danger" type="submit" name="submit"value="Fazer Cadastro">
+                    </div>
+                </form>
+                <p>*Valido somente para investimentos em dinheiro.</p>
             </div>
         </div>
 
-        <!-- Modal -->
-        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div id="mod_cont">
-                    <form action="final.php" method="post">
-                        <div class="mod_div">
-                            <soft>Quero investir</soft> <input width="7" type="number" min="0" step="1" name="valor" placeholder="1000" required>
-                            <soft>em</soft>
-                            <select name="option" value="Tecnologia">
-                                <option value="Tecnologia">Tecnologia</option>
-                                <option value="Saude">Saude</option>
-                                <option value="Sustentabilidade">Sustentabilidade</option>
-                                <option value="Inovações">Inovações</option>
-                            </select> 
-                        </div>
-                        <div class="mod_div">
-                            <soft>Email para contato</soft> <input name="email" type="email" placeholder="exemplo@email.com" required>
-                        </div>
-                        <div class="mod_div">
-                            <input class="btn btn-danger" type="submit" name="submit"value="Fazer Investimento">
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
+        
     </body>
 </html>

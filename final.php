@@ -7,13 +7,11 @@
         $database = "lance_me";
         $conn = new mysqli($servername, $username, $password, $database);   
         
-        $valor = $conn->escape_string($_POST['valor']);
         $email = $conn->escape_string($_POST['email']);
-        $option = $conn->escape_string($_POST['option']);
         
         // Check connection
         if (!mysqli_connect_errno()) {
-            $sql = "INSERT INTO users (value, email, category) VALUES ('$valor', '$email', '$category')";
+            $sql = "INSERT INTO users (email) VALUES ('$email')";
             if ($conn->query($sql)) {
                 // echo("Inseriu info.");
             } else {
@@ -67,8 +65,8 @@
             <div class="row">
                 <div class="col-md-4"></div>
                 <div class="col-md-4"></div>  
-                    <h1 style="color:#e9474a">Agradecemos o Interesse!</h1>
-                    <h1><small>Em breve enviaremos os projetos selecionados para investimento.</small></h1><h1><small><b style="color:black">Obrigado!</b></small>  </small></h1>
+                    <h1 style="color:#e9474a">Agradecemos o interesse!</h1>
+                    <h1><small>Em breve enviaremos os projetos selecionados para investimento.</small></h1><h1><small>Obrigado!</small>  </small></h1>
                 <div class="col-md-4"></div>
             </div>
             <div class="row">
