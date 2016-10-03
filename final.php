@@ -66,7 +66,7 @@
                 <div class="col-md-4"></div>
                 <div class="col-md-4"></div>  
                     <h1 style="color:#e9474a">Agradecemos o interesse!</h1>
-                    <h1><small>Em breve enviaremos os projetos selecionados para investimento.</small></h1><h1><small>Obrigado!</small>  </small></h1>
+                    <h1><small>Logo, logo, entraremos em contato com você possa iniciar seus investimentos! <br>Obrigado!  </small></h1>
                 <div class="col-md-4"></div>
             </div>
             <div class="row">
